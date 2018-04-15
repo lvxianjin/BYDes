@@ -14,9 +14,7 @@ public class UserController {
     private IUser iUser = null;
     @RequestMapping("index.html")
     public String getUser(HttpServletRequest request){
-        System.out.print("123");
         String name = iUser.getNameById();
-        System.out.print(name);
         request.setAttribute("name",name);
         return "index";
     }
